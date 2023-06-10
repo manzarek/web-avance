@@ -1,0 +1,25 @@
+{
+  "products": [
+    {
+      "id": 2,
+      "name": "iPad next",
+      "description": "iPad 7th generation",
+      "price": "299.00",
+      "category": "electronics"
+    },
+    {
+      "id": 5,
+      "name": "Calculatrice",
+      "description": "Calculatrice scientifique fx280",
+      "price": "199.99",
+      "category": "school"
+    },
+    {
+      "name": "Headset",
+      "description": "Headset cx200",
+      "price": "199.00",
+      "category": "electronics",
+      "id": 6
+    }
+  ]
+}

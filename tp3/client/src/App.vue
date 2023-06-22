@@ -19,13 +19,6 @@
         :removeInv = "removeInventory"
         :remove = "removeItem"
         />
-        <Sidebar
-        v-if="showSideBar"
-        :toggle="toggleSideBar"
-        :cart="cart"
-        :inventory="inventory"
-        :remove="removeItem"
-        />
         <!-- Footer-->
         <footer class="py-5 bg-dark">
             <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Distribution Maisonneuve 2023</p></div>
@@ -33,23 +26,15 @@
 </template>
 
 <script>
-import Sidebar from '@/components/SideBar.vue'
 import ProductDataService from '@/services/ProductDataService'
 export default {
-  components: {
-    Sidebar
-  },
   data () {
     return {
-      showSideBar: false,
       inventory: [],
       cart: {}
     }
   },
   methods: {
-    toggleSideBar () {
-      this.showSideBar = !this.showSideBar
-    },
     addToCart (product, index) {
       if (!this.cart[product]) this.cart[product] = 0
       this.cart[product] += this.inventory[index].quantity
@@ -70,13 +55,6 @@ export default {
     },
     removeInventory (index) {
       this.inventory.splice(index, 1)
-    }
-  },
-  computed: {
-    totalQuantity () {
-      return Object.values(this.cart).reduce((acc, curr) => {
-        return acc + curr
-      }, 0)
     }
   },
   mounted () {

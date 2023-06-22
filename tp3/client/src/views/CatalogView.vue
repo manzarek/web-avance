@@ -27,6 +27,9 @@
                                     <p>{{ product.description }} </p>
                                     <p>{{ product.type }} </p>
                                     <div class="btn-group-custom">
+                                      <RouterLink :to="{name: 'product', params: {id: product.name}}">Voir détails</RouterLink>
+                                      <br>
+                                      <br>
                                       <RouterLink :to="{name: 'edit-product', params: {id: product.id}}" class="btn btn-outline-success mt-10">Modifier</RouterLink>
                                       <button class="btn btn-danger btn-lg mt-3" type="button" @click="deleteProduct(product.id)">Supprimer</button>
                                     </div>

@@ -12,17 +12,6 @@
                           <span>$ {{ product.price.toFixed(2) }}</span>
                       </div>
                       <p class="lead">{{ product.description }}</p>
-                      <div class="d-flex">
-                          <input class="form-control text-center me-3" id="inputQuantity" type="number" style="max-width: 3rem" v-model.number="product.quantity"/>
-                          <button class="btn btn-outline-dark flex-shrink-0" type="button" @click="add(product.name, productIndex)">
-                              <i class="bi-cart-fill me-1"></i>
-                              Add to cart
-                          </button>
-                      </div>
-                      <hr class="my-4">
-                      <div class="d-flex">
-                        <RouterLink :to="{name: 'edit-product', params: {id: product.id}}" class="btn btn-outline-success mt-10">Edit Product</RouterLink>
-                      </div>
                   </div>
               </div>
           </div>
